@@ -8,6 +8,17 @@ export class FoodService {
 
   constructor() { }
 
+  getAllFoodsByTag(tag:string): Food[]{
+
+    return tag == "All" ?
+    this.getAll() : 
+    this.getAll().filter(food => food.tags?.includes(tag));
+    
+    // if(tag=="All")
+    //   return this.getAll();
+    // else
+    //   return this.getAll().filter(food => food.tags?.includes(tag));
+  }
   getAll(): Food[] {
     return [
       {
