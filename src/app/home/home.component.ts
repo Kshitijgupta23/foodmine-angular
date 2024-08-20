@@ -6,11 +6,12 @@ import { RatingModule } from 'ng-starrating';
 import { ActivatedRoute } from '@angular/router';
 import { SearchComponent } from "../search/search.component";
 import { TagsComponent } from "../tags/tags.component"
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, SearchComponent,TagsComponent],
+  imports: [CommonModule, SearchComponent,TagsComponent, RouterModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
